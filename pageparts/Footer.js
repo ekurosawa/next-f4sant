@@ -9,12 +9,13 @@ import Link from '@mui/material/Link';
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary">
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
+      {' © '}
       {new Date().getFullYear()}
-      {'.'}
+      {'  '}
+      <Link color="inherit" href="https://mui.com/">
+        F4SANT 
+        </Link>{'  '}
+        All Rights Reserved.
     </Typography>
   );
 }
@@ -26,29 +27,30 @@ export default function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
 
-        <CssBaseline />
-        <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+      <CssBaseline />
+      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+      </Container>
+      <Box
+        component="footer"
+        sx={{
+          py: 3,
+          px: 2,
+          mt: 'auto',
+          backgroundColor: (theme) =>
+            theme.palette.mode === 'light'
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
+        }}
+      >
+        <Container maxWidth="sm">
+          <Typography variant="body1">
+
+            Nakazuba
+          </Typography>
+          <Copyright />
         </Container>
-        <Box
-          component="footer"
-          sx={{
-            py: 3,
-            px: 2,
-            mt: 'auto',
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[200]
-                : theme.palette.grey[800],
-          }}
-        >
-          <Container maxWidth="sm">
-            <Typography variant="body1">
-              My sticky footer can be found here.
-            </Typography>
-            <Copyright />
-          </Container>
-        </Box>
-      
+      </Box>
+
     </ThemeProvider>
   );
 }

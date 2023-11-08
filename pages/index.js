@@ -61,6 +61,8 @@ const defaultTheme = createTheme();
 export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={defaultTheme}>
+            <link rel="icon" href="/favicon.ico" />
+
       <Header >
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Header>

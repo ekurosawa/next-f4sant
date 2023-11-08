@@ -2,7 +2,7 @@
 title: "食べるとおいしい？"
 date: "2023-11-03"
 writer: "柿本 建"
-thumbNa: /images/kin_22.png
+thumbNa: /images/R0019098.png
 ---
  
  こーじちゅー。。

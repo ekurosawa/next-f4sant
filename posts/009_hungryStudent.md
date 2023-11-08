@@ -2,7 +2,7 @@
 title: "腹が減ってるわけじゃない"
 date: "2023-11-05"
 writer: "乾 洋典"
-thumbNa: /images/562752.png
+thumbNa: /images/22398508_s.jpg
 ---
 
 こーじちゅー。。
