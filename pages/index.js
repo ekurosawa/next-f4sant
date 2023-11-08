@@ -19,6 +19,7 @@ import Container from '@mui/material/Container';
 
 import Header from './Header';
 import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -91,7 +92,7 @@ export default function Home({ allPostsData }) {
               color="text.primary"
               gutterBottom
             >
-              Album layout
+              Articles
             </Typography>
           <Grid
             container spacing={4}
@@ -147,22 +148,10 @@ export default function Home({ allPostsData }) {
             social={sidebar.social}
           />
 
-      {/* Footer */}
-      <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          hoge
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          hugahuga
-        </Typography>
-        <Copyright />
-      </Box>
-      {/* End footer */}
+
+      <Footer>
+
+      </Footer>
       </ThemeProvider>
   );
 }

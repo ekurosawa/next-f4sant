@@ -10,7 +10,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 
-
+{/*}
 const sidebar = {
   title: 'hororo',
   description:
@@ -25,14 +25,16 @@ const sidebar = {
 
   ],
 };
+*/}
 
 
-function Sidebar(props, sidebar, archives) {
-  {/*const { archives, description, social, title } = props;*/}
+function Sidebar(props, sidebar) {
+  const { archives, description, social, title } = props;
 
   return (
     <Grid sx={{ py: 6 }} item xs={12} md={4}>
-      <Paper
+
+      {/*<Paper
         align="center"
         elevation={3}
         maxWidth="350px"
@@ -41,12 +43,13 @@ function Sidebar(props, sidebar, archives) {
           {sidebar.title}
         </Typography>
         <Typography>{sidebar.description}</Typography>
-      </Paper>
+  </Paper>*/}
+
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Archives
       </Typography>
 
-      {/*
+      
       {archives.map((archive) => (
         <Link display="block" variant="body1" href={archive.url} key={archive.title}>
           {archive.title}
@@ -68,14 +71,14 @@ function Sidebar(props, sidebar, archives) {
             <span>{network.name}</span>
           </Stack>
         </Link>
-      ))}*/}
+      ))}
     </Grid>
   );
 }
 
 
 
-{/*
+
 Sidebar.propTypes = {
   archives: PropTypes.arrayOf(
     PropTypes.shape({
@@ -92,7 +95,6 @@ Sidebar.propTypes = {
   ).isRequired,
   title: PropTypes.string.isRequired,
 };
-*/}
 
 
 export default Sidebar;

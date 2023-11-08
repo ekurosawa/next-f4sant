@@ -44,7 +44,7 @@ function Header(props) {
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-            Company name
+            Nakazuba
           </Typography>
           <nav>
             <Link
@@ -53,7 +53,7 @@ function Header(props) {
               href="#"
               sx={{ my: 1, mx: 1.5 }}
             >
-              Features
+              WRITERS
             </Link>
             <Link
               variant="button"
@@ -61,7 +61,7 @@ function Header(props) {
               href="#"
               sx={{ my: 1, mx: 1.5 }}
             >
-              Enterprise
+              SERIALIZATION
             </Link>
             <Link
               variant="button"
@@ -69,12 +69,12 @@ function Header(props) {
               href="#"
               sx={{ my: 1, mx: 1.5 }}
             >
-              Support
+              ABOUT
             </Link>
           </nav>
-          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+          {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
-          </Button>
+          </Button>*/}
         </Toolbar>
       </AppBar>
       {/*}
