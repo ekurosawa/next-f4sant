@@ -51,7 +51,6 @@ const sidebar = {
   ],
   social: [
     { name: 'Twitter', icon: TwitterIcon },
-
   ],
 };
 

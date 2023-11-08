@@ -7,31 +7,19 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
+import  Container  from '@mui/material/Container';
 
 
 
-{/*}
-const sidebar = {
-  title: 'hororo',
-  description:
-    'kekekekekekekekekekekekekekekekekekekekkekekekekekekkekekekekekekekke',
-  archives: [
-    { title: 'Nov 2023', url: '#' },
-    { title: 'Oct 2023', url: '#' },
-
-  ],
-  social: [
-    { name: 'Twitter', icon: TwitterIcon },
-
-  ],
-};
-*/}
 
 
-function Sidebar(props, sidebar) {
+
+
+function Sidebar(props) {
   const { archives, description, social, title } = props;
 
   return (
+    <Container maxWidth="lg">
     <Grid sx={{ py: 6 }} item xs={12} md={4}>
 
       {/*<Paper
@@ -49,30 +37,35 @@ function Sidebar(props, sidebar) {
         Archives
       </Typography>
 
-      
-      {archives.map((archive) => (
-        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
-          {archive.title}
+    {/*}  
+      {archives.map(({archive, title, url}) => (
+        <Link display="block" variant="body1" href={archives.url} key={title}>
+          {title}
         </Link>
       ))}
+
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>
-      {social.map((network) => (
+*/}
+{/*}
+      {social.map((network, name, key) => (
         <Link
           display="block"
           variant="body1"
           href="#"
-          key={network.name}
+          key={name}
           sx={{ mb: 0.5 }}
         >
           <Stack direction="row" spacing={1} alignItems="center">
             <network.icon />
-            <span>{network.name}</span>
+            <span>{name}</span>
           </Stack>
         </Link>
       ))}
+      */}
     </Grid>
+    </Container>
   );
 }
 
