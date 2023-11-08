@@ -11,10 +11,6 @@ import  Container  from '@mui/material/Container';
 
 
 
-
-
-
-
 function Sidebar(props) {
   const { archives, description, social, title } = props;
 
@@ -37,8 +33,8 @@ function Sidebar(props) {
         Archives
       </Typography>
 
-    {/*}  
-      {archives.map(({archive, title, url}) => (
+    
+      {archives.map(({archive, title, url}, ) => (
         <Link display="block" variant="body1" href={archives.url} key={title}>
           {title}
         </Link>
@@ -47,23 +43,23 @@ function Sidebar(props) {
       <Typography variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>
-*/}
-{/*}
+
+
       {social.map((network, name, key) => (
         <Link
           display="block"
           variant="body1"
           href="#"
-          key={name}
+          key={network.name}
           sx={{ mb: 0.5 }}
         >
           <Stack direction="row" spacing={1} alignItems="center">
             <network.icon />
-            <span>{name}</span>
+            <span>{network.name}</span>
           </Stack>
         </Link>
       ))}
-      */}
+    
     </Grid>
     </Container>
   );

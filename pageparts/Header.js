@@ -29,11 +29,13 @@ function Header(props) {
     { title: 'Style', url: '#' },
   { title: 'Travel', url: '#' },*/}
   ];
-  
-  {/*const { sections, title } = props;*/}
+
+  {/*const { sections, title } = props;*/ }
 
   return (
     <React.Fragment>
+      <link rel="icon" href="/1104_illu.svg" />
+
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
       <AppBar
@@ -77,7 +79,8 @@ function Header(props) {
           </Button>*/}
         </Toolbar>
       </AppBar>
-      {/*}
+
+      {/*
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Button size="small">Subscribe</Button>
         <Typography
@@ -114,7 +117,8 @@ function Header(props) {
             {section.title}
           </Link>
         ))}
-        </Toolbar>*/}
+        </Toolbar>
+        */}
     </React.Fragment>
   );
 }

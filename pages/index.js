@@ -17,9 +17,10 @@ import Divider from '@mui/material/Divider';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
+import Header from '../pageparts/Header';
+import Main from '../pageparts/Main';
+import Sidebar from '../pageparts/Sidebar';
+import Footer from '../pageparts/Footer';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -64,6 +65,9 @@ export default function Home({ allPostsData }) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Header>
 
+<Main>
+  
+</Main>
       <main>
         {/*<MainFeaturedPost post={mainFeaturedPost} />*/}
         <Grid container spacing={4}>
@@ -72,16 +76,6 @@ export default function Home({ allPostsData }) {
             ))}*/}
         </Grid>
         <Grid container spacing={5} sx={{ mt: 3 }}>
-
-
-
-
-        {/*Article以下の段落*/}
-
-
-
-
-        {/*<ul className={utilStyles.list}>*/}
 
         <Container maxWidth="lg">
         <Typography
@@ -186,10 +180,3 @@ export async function getStaticProps() {
                   </Typography>*/}
 
 
-{/*<li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${id}`}>{title}</Link>
-                            <br />
-                            <small className={utilStyles.lightText}>
-                              <Date dateString={date} />
-                            </small>
-                        </li>*/}
