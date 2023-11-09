@@ -61,15 +61,15 @@ const defaultTheme = createTheme();
 export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={defaultTheme}>
-            <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="favi.ico" />
 
       <Header >
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Header>
 
-<Main>
-  
-</Main>
+      <Main>
+
+      </Main>
       <main>
         {/*<MainFeaturedPost post={mainFeaturedPost} />*/}
         <Grid container spacing={4}>
@@ -79,8 +79,8 @@ export default function Home({ allPostsData }) {
         </Grid>
         <Grid container spacing={5} sx={{ mt: 3 }}>
 
-        <Container maxWidth="lg">
-        <Typography
+          <Container maxWidth="lg">
+            <Typography
               component="h1"
               variant="h2"
               align="center"
@@ -89,65 +89,65 @@ export default function Home({ allPostsData }) {
             >
               Articles
             </Typography>
-          <Grid
-            container spacing={4}
-          >
+            <Grid
+              container spacing={4}
+            >
 
-            {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
-                >
-                  <CardMedia
-                    component="div"
-                    sx={{
-                      // 16:9
-                      pt: '56.25%',
-                    }}
-                    image={thumbNa}
-                    alt="image"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Box justifyContent="space-between" display="flex">
-                      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                        <small className={utilStyles.lightText}>
-                          {date}
-                        </small>
+              {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
+                <Grid item key={card} xs={12} sm={6} md={4}>
+                  <Card
+                    sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                  >
+                    <CardMedia
+                      component="div"
+                      sx={{
+                        // 16:9
+                        pt: '56.25%',
+                      }}
+                      image={thumbNa}
+                      alt="image"
+                    />
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Box justifyContent="space-between" display="flex">
+                        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                          <small className={utilStyles.lightText}>
+                            {date}
+                          </small>
+                        </Typography>
+                        <Typography sx={{ fontSize: 12 }} color="text.secondary" >
+                          <a></a>{writer}
+                        </Typography>
+                      </Box>
+                      <Typography variant="h9" component="div">
+                        {/*be{bull}nev{bull}o{bull}lent*/}
+                        <Link href={`/posts/${id}`}>{title}</Link>
+                        <br />
                       </Typography>
-                      <Typography sx={{ fontSize: 12 }} color="text.secondary" >
-                        <a></a>{writer}
-                      </Typography>
-                    </Box>
-                    <Typography variant="h9" component="div">
-                      {/*be{bull}nev{bull}o{bull}lent*/}
-                      <Link href={`/posts/${id}`}>{title}</Link>
-                      <br />
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-            {/*</ul>*/}
-          </Grid>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+              {/*</ul>*/}
+            </Grid>
 
 
-        </Container>
+          </Container>
 
-      </Grid>
+        </Grid>
       </main>
 
       <Sidebar
-            title={sidebar.title}
-            description={sidebar.description}
-            archives={sidebar.archives}
-            social={sidebar.social}
-          />
+        title={sidebar.title}
+        description={sidebar.description}
+        archives={sidebar.archives}
+        social={sidebar.social}
+      />
 
 
       <Footer>
 
       </Footer>
-      </ThemeProvider>
+    </ThemeProvider>
   );
 }
 
