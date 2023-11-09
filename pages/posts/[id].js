@@ -65,7 +65,7 @@ export default function Post({ postData }) {
           <CardMedia
           center
             component="img"
-            sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+            sx={{ width: 600, display: { xs: 'none', sm: 'block' } }}
             image={postData.thumbNa}
             alt="thumbna"
           />
