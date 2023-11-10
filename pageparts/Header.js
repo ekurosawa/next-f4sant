@@ -22,20 +22,26 @@ function Header(props) {
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
       <AppBar
-        position="static"
+        position="fixed"
         color="default"
-        elevation={0}
+        elevation={1}
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Link variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }} href="/" style={{ textDecoration: 'none' }}>
+          <Link 
+          fontStyle="bold"
+          variant="h5" 
+          color="inherit" 
+          noWrap sx={{ flexGrow: 1 }} 
+          href="/" 
+          style={{ textDecoration: 'none' }}>
             Nakazuba
           </Link>
           <nav>
             <Link
               variant="button"
               color="text.primary"
-              href="#"
+              href="/writers"
               sx={{ my: 1, mx: 1.5 }}
               style={{ textDecoration: 'none' }}
             >

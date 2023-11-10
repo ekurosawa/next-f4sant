@@ -15,21 +15,14 @@ function Main(props) {
       md={8}
       sx={{
         '& .markdown': {
-          py: 3,
+        py: 3
         },
       }}
     >
-      <Typography variant="h6" gutterBottom>
+      <Typography py={4} variant="h6" >
         {title}
       </Typography>
       <Divider />
-      {/*
-      {posts.map((post) => (
-        <Markdown className="markdown" key={post.substring(0, 40)}>
-          {post}
-        </Markdown>
-      ))}
-      */}
     </Grid>
   );
 }

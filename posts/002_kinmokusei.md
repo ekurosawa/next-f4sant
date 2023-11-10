@@ -3,7 +3,7 @@ title: "キンモクセイ"
 date: "2023-10-19"
 writer: "英 世志香"
 thumbNa: /images/kin__16.png
-tug: "#食事 #人間関係"
+tug: ""
 ---
 夕食の支度をする前に散歩に出かけた。
 

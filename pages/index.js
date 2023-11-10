@@ -10,6 +10,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
+import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
@@ -61,15 +62,14 @@ const defaultTheme = createTheme();
 export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <link rel="icon" href="favi.ico" />
+      <link rel="icon" href="/1104_illu.svg" />
 
       <Header >
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Header>
 
-      <Main>
+      <Main></Main>
 
-      </Main>
       <main>
         {/*<MainFeaturedPost post={mainFeaturedPost} />*/}
         <Grid container spacing={4}>
@@ -77,12 +77,12 @@ export default function Home({ allPostsData }) {
               <FeaturedPost key={post.title} post={post} />
             ))}*/}
         </Grid>
-        <Grid container spacing={5} sx={{ mt: 3 }}>
+        <Grid container py={2} spacing={5} sx={{ mt: 3 }}>
 
           <Container maxWidth="lg">
             <Typography
               component="h1"
-              variant="h2"
+              variant="h4"
               align="center"
               color="text.primary"
               gutterBottom
@@ -106,6 +106,7 @@ export default function Home({ allPostsData }) {
                       }}
                       image={thumbNa}
                       alt="image"
+                      href={`/posts/${id}`}
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       <Box justifyContent="space-between" display="flex">
@@ -115,14 +116,12 @@ export default function Home({ allPostsData }) {
                           </small>
                         </Typography>
                         <Typography sx={{ fontSize: 12 }} color="text.secondary" >
-                          <a></a>{writer}
+                          {writer}
                         </Typography>
                       </Box>
-                      <Typography variant="h9" component="div">
                         {/*be{bull}nev{bull}o{bull}lent*/}
-                        <Link href={`/posts/${id}`}>{title}</Link>
+                        <Link href={`/posts/${id}`} color="inherit">{title}</Link>
                         <br />
-                      </Typography>
                     </CardContent>
                   </Card>
                 </Grid>

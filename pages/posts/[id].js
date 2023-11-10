@@ -80,9 +80,9 @@ export default function Post({ postData }) {
           </Typography>
         </Box>
         <Divider />
-        <Typography py={1} sx={{ fontSize: 16 }} color="text.secondary" >
-            {postData.writer}
-          </Typography>
+        <Typography py={1} sx={{ fontSize: 16, textAlign: "right" }} color="text.secondary" >
+          {postData.writer}
+        </Typography>
 
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /></div>
 

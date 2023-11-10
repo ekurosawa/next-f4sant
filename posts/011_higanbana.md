@@ -3,7 +3,7 @@ title: "彼岸花！"
 date: "2023-10-27"
 writer: "柿本 建"
 thumbNa: /images/hig_2.jpg
-tug: "#食事 #人間関係"
+tug: ""
 ---
 
 ![Alt text](/images/hig_1.jpg)
