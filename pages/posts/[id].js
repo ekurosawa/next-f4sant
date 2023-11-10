@@ -54,24 +54,16 @@ export default function Post({ postData }) {
       <Header >
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Header>
-
-
-          
-
-
-      <Grid item xs={12}>
-      <CardActionArea >
-        <Card sx={{ display: 'flex' }}>
+  
+        <Card>
           <CardMedia
-          center
             component="img"
-            sx={{ width: 600, display: { xs: 'none', sm: 'block' } }}
             image={postData.thumbNa}
             alt="thumbna"
+            height={270}
+            
           />
         </Card>
-      </CardActionArea>
-    </Grid>
 
 
       <title>{postData.title}</title>
