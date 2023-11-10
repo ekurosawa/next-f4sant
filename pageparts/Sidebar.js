@@ -35,7 +35,7 @@ function Sidebar(props) {
 
     
       {archives.map(({archive, title, url}, ) => (
-        <Link display="block" variant="body1" href={archives.url} key={title}>
+        <Link display="block" variant="body1" href={archives.url} key={title} style={{ textDecoration: 'none' }}>
           {title}
         </Link>
       ))}
@@ -52,6 +52,7 @@ function Sidebar(props) {
           href="#"
           key={network.name}
           sx={{ mb: 0.5 }}
+          style={{ textDecoration: 'none' }}
         >
           <Stack direction="row" spacing={1} alignItems="center">
             <network.icon />

@@ -13,11 +13,12 @@ import markdownToHtml from '../../lib/markdownToHtml';
 import styles from '../../components/layout.module.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-
+import Divider from '@mui/material/Divider';
 
 import Image from 'next/image';
 import { Typography } from '@mui/material';
@@ -54,29 +55,37 @@ export default function Post({ postData }) {
       <Header >
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Header>
-  
-        <Card>
-          <CardMedia
-            component="img"
-            image={postData.thumbNa}
-            alt="thumbna"
-            height={270}
-            
-          />
-        </Card>
-
 
       <title>{postData.title}</title>
 
+      <Card>
+        <CardMedia
+          component="img"
+          image={postData.thumbNa}
+          alt="thumbna"
+          height={270}
+
+        />
+      </Card>
+
       <div className={styles.container}>
-        
-          <Typography variant="h3">{postData.title}</Typography>
-            <Typography py={2}><Date dateString={postData.date} /></Typography>
-            <Typography py={1}>{postData.writer}</Typography>
 
+        <Typography py={1} variant="h4">{postData.title}</Typography>
+        <Box justifyContent="space-between" display="flex" py={1} >
+          <Typography sx={{ fontSize: 20 }} fontStyle="bold" color="text.secondary" gutterBottom>
+            {postData.tug}
+          </Typography>
+          <Typography sx={{ fontSize: 16, fontWeight: "bold" }} color="text.secondary" >
+            {postData.date}
+          </Typography>
+        </Box>
+        <Divider />
+        <Typography py={1} sx={{ fontSize: 16 }} color="text.secondary" >
+            {postData.writer}
+          </Typography>
 
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </div>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /></div>
+
       <Footer></Footer>
     </ThemeProvider>
   );

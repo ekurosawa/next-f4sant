@@ -3,6 +3,7 @@ title: "トマトスパゲッティがつくりたい！"
 date: "2023-10-23"
 writer: "柿本 建"
 thumbNa: /images/2363158.png
+tug: "#食事 #人間関係"
 ---
 
 ![Alt text](/images/t_1.png)

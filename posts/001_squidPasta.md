@@ -3,6 +3,7 @@ title: "ペスカトーレを作りたい！"
 date: "2023-10-17"
 writer: "柿本 建"
 thumbNa: /images/562752.png
+tug: "#食事 #人間関係"
 ---
 ![Alt text](/images/sq-ls_1.png)
 

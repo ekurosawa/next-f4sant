@@ -3,6 +3,7 @@ title: "食べるとおいしい？"
 date: "2023-11-03"
 writer: "柿本 建"
 thumbNa: /images/R0019098.png
+tug: "#食事 #人間関係"
 ---
  
  こーじちゅー。。

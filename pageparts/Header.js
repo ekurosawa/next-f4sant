@@ -13,24 +13,7 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 
-import Layout, { siteTitle } from '../components/layout';
-
-
 function Header(props) {
-  const sections = [
-    { title: 'Technology', url: '#' },
-    { title: 'Design', url: '#' },
-    { title: 'Culture', url: '#' },
-    { title: 'Business', url: '#' },
-    { title: 'Politics', url: '#' },
-    { title: 'Opinion', url: '#' },
-    {/*{ title: 'Science', url: '#' },
-    { title: 'Health', url: '#' },
-    { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },*/}
-  ];
-
-  {/*const { sections, title } = props;*/ }
 
   return (
     <React.Fragment>
@@ -45,15 +28,16 @@ function Header(props) {
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+          <Link variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }} href="/" style={{ textDecoration: 'none' }}>
             Nakazuba
-          </Typography>
+          </Link>
           <nav>
             <Link
               variant="button"
               color="text.primary"
               href="#"
               sx={{ my: 1, mx: 1.5 }}
+              style={{ textDecoration: 'none' }}
             >
               WRITERS
             </Link>
@@ -62,6 +46,7 @@ function Header(props) {
               color="text.primary"
               href="#"
               sx={{ my: 1, mx: 1.5 }}
+              style={{ textDecoration: 'none' }}
             >
               SERIALIZATION
             </Link>
@@ -70,6 +55,7 @@ function Header(props) {
               color="text.primary"
               href="#"
               sx={{ my: 1, mx: 1.5 }}
+              style={{ textDecoration: 'none' }}
             >
               ABOUT
             </Link>
