@@ -17,7 +17,7 @@ function Header(props) {
 
   return (
     <React.Fragment>
-      <link rel="icon" href="/favi.ico" />
+      <link rel="icon" href='/images/nakazuba40white.png' />
 
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />

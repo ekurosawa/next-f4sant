@@ -27,78 +27,99 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 
+const writerData = [
+    {
+        wart:  '/images/nakazuba640.png',
+        wname: '柿本 建',
+        intro: 'hogehogehogehogehogehogehoge'
+    },
+    {
+        wart:  '/images/flowerncafe.png',
+        wname: '英 世志香',
+        intro: 'hugehugehugehugehugehugehuge'
+    },
+    {
+        wart:  '/images/hitoriTravel.png',
+        wname: '乾 洋典',
+        intro: 'tekatekatekatekatekatekateka'
+    },
+];
+
+
 
 const defaultTheme = createTheme();
 
 
-export default function writers({ allPostsData }) {
-
+export default function writers() {
 
     return (
-        <ThemeProvider theme={defaultTheme}>
-            <link rel="icon" href="/1104_illu.svg" />
+        <>
+            <ThemeProvider theme={defaultTheme}>
+                <link rel="icon" href='/images/nakazuba40white.png' />
 
-            <Header >
-                <meta name="viewport" content="initial-scale=1, width=device-width" />
-            </Header>
+                <Header >
+                    <meta name="viewport" content="initial-scale=1, width=device-width" />
+                </Header>
 
-            <Main>
-            </Main>
+                <Main>
+                </Main>
 
-            <main>
+                <main>
 
-                <Grid container py={2} spacing={5} sx={{ mt: 3 }}>
 
-                    <Container maxWidth="lg">
-                        <Typography
-                            component="h1"
-                            variant="h4"
-                            align="center"
-                            color="text.primary"
-                            gutterBottom
-                        >
-                            writers
-                        </Typography>
-                        <Grid
-                            container spacing={8} // containe spacing : アイテム幅の調整
-                        >
+                    <Grid container py={2} spacing={5} sx={{ mt: 3 }}>
 
-                            {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
-                                <Grid item key={card} xs={12} sm={12} md={12}>
-                                    <Card
-                                        py={3} sx={{ height: '150%', display: 'flex', flexDirection: 'column' }}>
-                                        <CardContent sx={{ flexGrow: 1 }}>
-                                            <Box display="flex">
-                                                <CardMedia
-                                                    component="img"
-                                                    sx={{ width: 400, display: { xs: 'none', sm: 'block' } }}
-                                                    image=""
-                                                    alt="writer art"
-                                                />
-                                                <Box px={3} >
-                                                    
-                                                        <Link href="#" color='inherit' >"Writer introduction"</Link>
-                                                    
+                        <Container maxWidth="lg">
+                            <Typography
+                                component="h1"
+                                variant="h4"
+                                align="center"
+                                color="text.primary"
+                                gutterBottom
+                            >
+                                writers
+                            </Typography>
+                            <Grid
+                                container spacing={8} // containe spacing : アイテム幅の調整
+                            >
 
-                                                    <Typography sx={{ fontSize: 12 }} color="text.secondary" >
-
-                                                    </Typography>
+                                {writerData.map(({wart, wname, intro}, index) => (
+                                    <Grid item key={index} xs={12} sm={12} md={12}>
+                                        <Card
+                                            py={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} color='inherit'>
+                                            <CardContent sx={{ flexGrow: 1 }} >
+                                                <Box display="flex">
+                                                    <CardMedia
+                                                        component="img"
+                                                        sx={{ width: 400, display: { xs: 'none', sm: 'block' } }}
+                                                        image={wart}
+                                                        alt="writer art"
+                                                    />
+                                                    <Box px={3} color='inherit'>
+                                                        <Typography>
+                                                            {wname}
+                                                        </Typography>
+                                                        <Typography>
+                                                            {intro}
+                                                        </Typography>
+                                                    </Box>
                                                 </Box>
-                                            </Box>
-                                        </CardContent>
-                                    </Card>
-                                </Grid>
-                            ))}
-                        </Grid>
-                    </Container>
+                                            </CardContent>
+                                        </Card>
+                                        
+                                    </Grid>
+                                ))}
+                            </Grid>
+                        </Container>
 
-                </Grid>
-            </main>
+                    </Grid>
+                </main>
 
-            <Footer>
+                <Footer>
 
-            </Footer>
-        </ThemeProvider>
+                </Footer>
+            </ThemeProvider>
+        </>
     );
 }
 

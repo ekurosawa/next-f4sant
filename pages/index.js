@@ -62,7 +62,7 @@ const defaultTheme = createTheme();
 export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <link rel="icon" href="/1104_illu.svg" />
+      <link rel="icon" href='/images/nakazuba40white.png' />
 
       <Header >
         <meta name="viewport" content="initial-scale=1, width=device-width" />
