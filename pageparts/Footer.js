@@ -6,8 +6,19 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    background: '#222222'
+  },
+});
+
 function Copyright() {
   return (
+    <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
+
     <Typography variant="body2" color="text.secondary">
       {' © '}
       {new Date().getFullYear()}
@@ -17,6 +28,7 @@ function Copyright() {
         </Link>{'  '}
         All Rights Reserved.
     </Typography>
+    </ThemeProvider>
   );
 }
 

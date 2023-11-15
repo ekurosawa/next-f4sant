@@ -12,6 +12,8 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import CssBaseline from "@mui/material/CssBaseline";
+
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -29,19 +31,19 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 const writerData = [
     {
-        wart: '/images/nakazuba640.png',
+        wart: '/images/itiroshirota.png',
         wname: '白田 一郎',
         intro: '管理'
     },
     {
         wart: '/images/nakazuba640.png',
         wname: '柿本 建',
-        intro: `管理 \n エンジニア`
+        intro: `管理, エンジニア`
     },
     {
         wart: '/images/flowerncafe.png',
         wname: '英 世志香',
-        intro: '事務\n デザイナー'
+        intro: '事務, デザイナー'
     },
     {
         wart: '/images/hitoriTravel.png',
@@ -49,7 +51,7 @@ const writerData = [
         intro: '事務'
     },
     {
-        wart: '/images/flowerncafe.png',
+        wart: '/images/ekurosawa.png',
         wname: '黒澤 愛理',
         intro: '事務'
     },
@@ -57,14 +59,18 @@ const writerData = [
 
 
 
-const defaultTheme = createTheme();
-
+const darkTheme = createTheme({
+    palette: {
+        mode: 'dark',
+    },
+});
 
 export default function writers() {
 
     return (
         <>
-            <ThemeProvider theme={defaultTheme}>
+            <ThemeProvider theme={darkTheme}>
+                <CssBaseline />
                 <link rel="icon" href='/images/nakazuba40white.png' />
 
                 <Header >
@@ -86,7 +92,7 @@ export default function writers() {
                                 color="text.primary"
                                 gutterBottom
                             >
-                                writers
+                                Writers
                             </Typography >
                             <Grid
                                 container spacing={4} // containe spacing : アイテム幅の調整
@@ -95,7 +101,8 @@ export default function writers() {
                                 {writerData.map(({ wart, wname, intro }, index) => (
                                     <Grid item key={index} xs={12} sm={6} md={4}>
                                         <Card
-                                            py={3} sx={{ display: 'flex', flexDirection: 'column' }} color='inherit'>
+                                            className='card'
+                                            py={3} sx={{ display: 'flex', flexDirection: 'column' }} >
                                             <CardContent sx={{ flex: '10 auto' }} >
                                                 <Box display="flex">
                                                     <CardMedia
@@ -106,12 +113,12 @@ export default function writers() {
                                                     />
                                                     <Box px={2} color='inherit'>
 
-                                                        <Typography fontWeight="fontWeightBold" >
+                                                        <Typography color="black" fontFamily="sans-serif" fontWeight="Bold" >
                                                             {wname}
                                                         </Typography>
 
-                                                        <Box>
-                                                            <Typography px={4}fontWeight="fontWeightLight" fontSize={11} variant='h10'>
+                                                        <Box display="flex" justifyContent="flex-start">
+                                                            <Typography color="black" sx={{ whiteSpace: 'pre-line' }} fontSize={11} >
                                                                 {intro}
                                                             </Typography>
                                                         </Box>
@@ -119,7 +126,6 @@ export default function writers() {
                                                 </Box>
                                             </CardContent>
                                         </Card>
-
                                     </Grid>
                                 ))}
                             </Grid>

@@ -16,6 +16,7 @@ body {
     sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background-color: #333333;
 }
 
 * {
@@ -38,4 +39,8 @@ img {
 
 p {
   text-indent: 1rem;
+}
+
+.card {
+  background-color: aliceblue;
 }
