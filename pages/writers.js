@@ -29,19 +29,29 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 const writerData = [
     {
-        wart:  '/images/nakazuba640.png',
+        wart: '/images/nakazuba640.png',
+        wname: '白田 一郎',
+        intro: '管理'
+    },
+    {
+        wart: '/images/nakazuba640.png',
         wname: '柿本 建',
-        intro: 'hogehogehogehogehogehogehoge'
+        intro: `管理 \n エンジニア`
     },
     {
-        wart:  '/images/flowerncafe.png',
+        wart: '/images/flowerncafe.png',
         wname: '英 世志香',
-        intro: 'hugehugehugehugehugehugehuge'
+        intro: '事務\n デザイナー'
     },
     {
-        wart:  '/images/hitoriTravel.png',
+        wart: '/images/hitoriTravel.png',
         wname: '乾 洋典',
-        intro: 'tekatekatekatekatekatekateka'
+        intro: '事務'
+    },
+    {
+        wart: '/images/flowerncafe.png',
+        wname: '黒澤 愛理',
+        intro: '事務'
     },
 ];
 
@@ -67,8 +77,7 @@ export default function writers() {
                 <main>
 
 
-                    <Grid container py={2} spacing={5} sx={{ mt: 3 }}>
-
+                    <Grid container spacing={5} sx={{ mt: 3 }}>
                         <Container maxWidth="lg">
                             <Typography
                                 component="h1"
@@ -78,35 +87,39 @@ export default function writers() {
                                 gutterBottom
                             >
                                 writers
-                            </Typography>
+                            </Typography >
                             <Grid
-                                container spacing={8} // containe spacing : アイテム幅の調整
+                                container spacing={4} // containe spacing : アイテム幅の調整
                             >
 
-                                {writerData.map(({wart, wname, intro}, index) => (
-                                    <Grid item key={index} xs={12} sm={12} md={12}>
+                                {writerData.map(({ wart, wname, intro }, index) => (
+                                    <Grid item key={index} xs={12} sm={6} md={4}>
                                         <Card
-                                            py={3} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }} color='inherit'>
-                                            <CardContent sx={{ flexGrow: 1 }} >
+                                            py={3} sx={{ display: 'flex', flexDirection: 'column' }} color='inherit'>
+                                            <CardContent sx={{ flex: '10 auto' }} >
                                                 <Box display="flex">
                                                     <CardMedia
                                                         component="img"
-                                                        sx={{ width: 400, display: { xs: 'none', sm: 'block' } }}
+                                                        sx={{ width: 151 }}
                                                         image={wart}
                                                         alt="writer art"
                                                     />
-                                                    <Box px={3} color='inherit'>
-                                                        <Typography>
+                                                    <Box px={2} color='inherit'>
+
+                                                        <Typography fontWeight="fontWeightBold" >
                                                             {wname}
                                                         </Typography>
-                                                        <Typography>
-                                                            {intro}
-                                                        </Typography>
+
+                                                        <Box>
+                                                            <Typography px={4}fontWeight="fontWeightLight" fontSize={11} variant='h10'>
+                                                                {intro}
+                                                            </Typography>
+                                                        </Box>
                                                     </Box>
                                                 </Box>
                                             </CardContent>
                                         </Card>
-                                        
+
                                     </Grid>
                                 ))}
                             </Grid>

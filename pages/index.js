@@ -77,7 +77,7 @@ export default function Home({ allPostsData }) {
               <FeaturedPost key={post.title} post={post} />
             ))}*/}
         </Grid>
-        <Grid container py={2} spacing={5} sx={{ mt: 3 }}>
+        <Grid container py={4} spacing={5} sx={{ mt: 3 }}>
 
           <Container maxWidth="lg">
             <Typography
