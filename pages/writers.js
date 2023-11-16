@@ -59,16 +59,11 @@ const writerData = [
 
 
 
-const darkTheme = createTheme({
-    palette: {
-        mode: 'dark',
-    },
-});
+const darkTheme = createTheme();
 
 export default function writers() {
 
     return (
-        <>
             <ThemeProvider theme={darkTheme}>
                 <CssBaseline />
                 <link rel="icon" href='/images/nakazuba40white.png' />
@@ -138,7 +133,6 @@ export default function writers() {
 
                 </Footer>
             </ThemeProvider>
-        </>
     );
 }
 

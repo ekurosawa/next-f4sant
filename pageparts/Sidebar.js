@@ -29,7 +29,7 @@ function Sidebar(props) {
         <Typography>{sidebar.description}</Typography>
   </Paper>*/}
 
-      <Typography color="text.primary" variant="h6" gutterBottom sx={{ mt: 3 }}>
+      <Typography style={{ color: "aliceblue" }} color="inherit" variant="h6" gutterBottom sx={{ mt: 3 }}>
         Archives
       </Typography>
 
@@ -40,7 +40,7 @@ function Sidebar(props) {
         </Link>
       ))}
 
-      <Typography color="text.primary" variant="h6" gutterBottom sx={{ mt: 3 }}>
+      <Typography style={{ color: "aliceblue" }} variant="h6" gutterBottom sx={{ mt: 3 }}>
         Social
       </Typography>
 

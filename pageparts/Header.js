@@ -11,49 +11,50 @@ import AppBar from '@mui/material/AppBar';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
 import CssBaseline from '@mui/material/CssBaseline';
+import { create } from 'domain';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import { teal } from "@mui/material/colors";
+
+
+const theme = createTheme();
 
 function Header(props) {
 
   return (
+    <ThemeProvider theme={theme}>
     <React.Fragment>
       <link rel="icon" href='/images/nakazuba40white.png' />
-
-      <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
-      <CssBaseline />
       <AppBar
         position="fixed"
-        color="default"
         elevation={1}
+        style={{ backgroundColor: "#1a1a1a", textDecoration: 'none' }}
         sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Link 
           fontStyle="bold"
           variant="h5" 
-          color="inherit" 
+          style={{ color: "aliceblue" }} 
           noWrap sx={{ flexGrow: 1 }} 
-          href="/" 
-          style={{ textDecoration: 'none' }}>
+          href="/" >
             Nakazuba
           </Link>
           <nav>
             <Link
               variant="button"
-              color="text.primary"
               href="/writers"
               sx={{ my: 1, mx: 1.5 }}
-              style={{ textDecoration: 'none' }}
-            >
+              style={{ color: "aliceblue", textDecoration: 'none' }} 
+              >
               WRITERS
             </Link>
             <Link
               variant="button"
-              color="text.primary"
               href="#"
               sx={{ my: 1, mx: 1.5 }}
-              style={{ textDecoration: 'none' }}
-            >
+              style={{ color: "aliceblue", textDecoration: 'none' }} 
+              >
               SERIALIZATION
             </Link>
             <Link
@@ -61,7 +62,7 @@ function Header(props) {
               color="text.primary"
               href="#"
               sx={{ my: 1, mx: 1.5 }}
-              style={{ textDecoration: 'none' }}
+              style={{ color: "aliceblue", textDecoration: 'none' }} 
             >
               ABOUT
             </Link>
@@ -112,6 +113,7 @@ function Header(props) {
         </Toolbar>
         */}
     </React.Fragment>
+    </ThemeProvider>
   );
 }
 

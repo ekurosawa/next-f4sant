@@ -59,18 +59,12 @@ const sidebar = {
   ],
 };
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+const defaultTheme = createTheme();
 
 export default function Home({ allPostsData }) {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <sampleComponent />
-      
       <link rel="icon" href='/images/nakazuba40white.png' />
 
       <Header >
@@ -78,7 +72,6 @@ export default function Home({ allPostsData }) {
       </Header>
 
       <Main></Main>
-
       <main>
         {/*<MainFeaturedPost post={mainFeaturedPost} />*/}
         <Grid container spacing={4}>
@@ -93,9 +86,7 @@ export default function Home({ allPostsData }) {
               component="h1"
               variant="h4"
               align="center"
-              color="text.primary"
-              gutterBottom
-            >
+              color="inherit">
               Articles
             </Typography>
             <Grid
@@ -105,7 +96,7 @@ export default function Home({ allPostsData }) {
               {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
                 <Grid item key={card} xs={12} sm={6} md={4}>
                   <Card
-                    className='card'
+                    style={{ color: "aliceblue" }}
                     sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                   >
                     <CardMedia
@@ -130,7 +121,11 @@ export default function Home({ allPostsData }) {
                         </Typography>
                       </Box>
                         {/*be{bull}nev{bull}o{bull}lent*/}
-                        <Link href={`/posts/${id}`} color="inherit">{title}</Link>
+                        <Link 
+                          style={{ color: "#333333" }}
+                          href={`/posts/${id}`} color="inherit">
+                          {title}
+                        </Link>
                         <br />
                     </CardContent>
                   </Card>
