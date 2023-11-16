@@ -72,11 +72,7 @@ export default function writers() {
                     <meta name="viewport" content="initial-scale=1, width=device-width" />
                 </Header>
 
-                <Main>
-                </Main>
-
-                <main>
-
+                <Main></Main>
 
                     <Grid container spacing={5} sx={{ mt: 3 }}>
                         <Container maxWidth="lg">
@@ -86,6 +82,7 @@ export default function writers() {
                                 align="center"
                                 color="text.primary"
                                 gutterBottom
+                                sx={{ color: "aliceblue" }}
                             >
                                 Writers
                             </Typography >
@@ -127,7 +124,6 @@ export default function writers() {
                         </Container>
 
                     </Grid>
-                </main>
 
                 <Footer>
 

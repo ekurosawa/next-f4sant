@@ -65,23 +65,20 @@ export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
+      <Container style={{ backgroundColor: "#3d3d3d"}}>
       <link rel="icon" href='/images/nakazuba40white.png' />
 
-      <Header >
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-      </Header>
+      <Header ></Header>
 
       <Main></Main>
-      <main>
         {/*<MainFeaturedPost post={mainFeaturedPost} />*/}
-        <Grid container spacing={4}>
-          {/*{featuredPosts.map((post) => (
+        {/*<Grid container spacing={5} sx={{ mt: 3}}>
+          {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
-            ))}*/}
-        </Grid>
-        <Grid container py={4} spacing={5} sx={{ mt: 3 }}>
-
-          <Container maxWidth="lg">
+            ))}
+          </Grid>*/}
+        <Grid container spacing={5} sx={{ mt: 3 }}>
+          <Container>
             <Typography
               component="h1"
               variant="h4"
@@ -112,9 +109,7 @@ export default function Home({ allPostsData }) {
                     <CardContent sx={{ flexGrow: 1 }}>
                       <Box justifyContent="space-between" display="flex">
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                          <small className={utilStyles.lightText}>
-                            {date}
-                          </small>
+                          {date}
                         </Typography>
                         <Typography sx={{ fontSize: 12 }} color="text.secondary" >
                           {writer}
@@ -131,14 +126,12 @@ export default function Home({ allPostsData }) {
                   </Card>
                 </Grid>
               ))}
-              {/*</ul>*/}
             </Grid>
 
 
           </Container>
 
         </Grid>
-      </main>
 
       <Sidebar
         title={sidebar.title}
@@ -148,9 +141,9 @@ export default function Home({ allPostsData }) {
       />
 
 
-      <Footer>
-
-      </Footer>
+      <Footer>      </Footer>
+      
+      </Container>
     </ThemeProvider>
   );
 }
