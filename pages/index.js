@@ -33,7 +33,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 const posts = ['   '];
 
 const sections = [
-  { title: 'Technology', url: '#' },
+  
   { title: 'Design', url: '#' },
   { title: 'Culture', url: '#' },
   { title: 'Business', url: '#' },
