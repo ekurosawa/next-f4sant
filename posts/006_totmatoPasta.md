@@ -1,6 +1,6 @@
 ---
 title: "トマトスパゲッティがつくりたい！"
-date: "2023-10-23"
+date: "2023.10.23"
 writer: "柿本 建"
 thumbNa: /images/2363158.png
 tug: "#食事"

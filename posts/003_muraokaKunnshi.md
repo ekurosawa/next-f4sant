@@ -1,6 +1,6 @@
 ---
 title: "村岡くんの家"
-date: "2023-10-21"
+date: "2023.10.21"
 writer: "仲島 才希"
 thumbNa: /images/1087771.png
 tug: "#食事"

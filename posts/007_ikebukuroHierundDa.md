@@ -1,6 +1,6 @@
 ---
 title: "池袋で振り回された話"
-date: "2023-11-02"
+date: "2023.11.02"
 writer: "黒沢 絵理"
 thumbNa: /images/1739623.png
 tug: ""

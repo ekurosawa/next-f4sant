@@ -1,4 +1,3 @@
-
 html,
 body {
   padding: 0;
@@ -35,22 +34,12 @@ a:hover {
   text-decoration: none;
 }
 
-.muicardactionarea-focushighlight {
-  background: transparent;
-  pointer-events:none;
-  touch-action: none;
-}
-
-.mat-ripple-element {
-  display: none;
-}
-
 img {
   max-width: 100%;
 }
 
 p {
-  text-indent: 1rem;
+  text-indent: 0rem;
 }
 
 .appbar {

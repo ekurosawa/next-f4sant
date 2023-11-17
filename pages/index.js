@@ -28,6 +28,7 @@ import Footer from '../pageparts/Footer';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import { createAbstractBuilder } from 'typescript';
 
 
 const posts = ['   '];
@@ -69,7 +70,7 @@ export default function Home({ allPostsData }) {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      
+
       <Container fixed style={{ backgroundColor: "aliceblue", marginBottom: "0" }}>
         <link rel="icon" href='/images/nakazuba40white.png' />
 
@@ -82,7 +83,7 @@ export default function Home({ allPostsData }) {
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>*/}
-        <Grid container spacing={5} sx={{ mt: 2  }}>
+        <Grid container spacing={5} sx={{ mt: 2 }}>
           <Container maxWidth="lg">
             <Typography
               component="h1"
@@ -97,11 +98,13 @@ export default function Home({ allPostsData }) {
               container spacing={4}
             >
               {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
-                <Grid item key={card} xs={12} sm={12} md={4}>
-                  <CardActionArea component="a" href={`/posts/${id}`}>
+                <Grid item key={card} xs={6} sm={6} md={4}>
+
                   <Card
+                    component="a"
+                    href="#"
                     style={{ backgroundColor: "#ffeeff" }}
-                    sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                    sx={{ aspectRatio: 1 / 1, display: 'flex', flexDirection: 'column' }}
                   >
                     <CardMedia
                       component="div"
@@ -114,24 +117,20 @@ export default function Home({ allPostsData }) {
                       alt="image"
                       href={`/posts/${id}`}
                     />
-                    <CardContent sx={{ flexGrow: 1 }}>
+                    <CardContent sx={{  flexGrow: 1 }}>
                       <Box justifyContent="space-between" display="flex">
-                        <Typography sx={{ fontSize: 14, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" gutterBottom>
+                        <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
                           {date}
                         </Typography>
-                        <Typography sx={{ fontSize: 12, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
+                        <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
                           {writer}
                         </Typography>
                       </Box>
-                      {/*be{bull}nev{bull}o{bull}lent*/}
-                      <Link
-                        style={{ color: "#1a1a1a", textDecoration: 'none' }}
-                        href={`/posts/${id}`} color="inherit">
-                        {title}
-                      </Link>
+                        <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary">
+                          {title}
+                        </Typography>
                     </CardContent>
                   </Card>
-                  </CardActionArea>
                 </Grid>
               ))}
             </Grid>
@@ -174,12 +173,5 @@ export async function getStaticProps() {
   };
 }
 
-
-
-{/*<Typography variant="body2" color="text.secondary">
-                  well meaning and kindly.
-                  <br />
-                  {'"a benevolent smile"'}
-                  </Typography>*/}
 
 

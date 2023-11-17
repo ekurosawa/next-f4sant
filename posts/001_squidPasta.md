@@ -1,6 +1,6 @@
 ---
 title: "ペスカトーレを作りたい！"
-date: "2023-10-17"
+date: "2023.10.17"
 writer: "柿本 建"
 thumbNa: /images/562752.png
 tug: "#食事"

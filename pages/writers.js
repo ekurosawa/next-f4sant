@@ -34,7 +34,7 @@ const writerData = [
         wart: '/images/itiroshirota.png',
         wname: '白田 一郎',
         wnameen: 'Shirota Ichiro',
-        intro: '管理'
+        intro: '管理, 運営'
     },
     {
         wart: '/images/nakazuba640.png',
@@ -52,13 +52,13 @@ const writerData = [
         wart: '/images/hitoriTravel.png',
         wname: '乾 洋典',
         wnameen: 'Inui Hironori',
-        intro: '事務'
+        intro: '事務, 企画'
     },
     {
         wart: '/images/ekurosawa.png',
         wname: '黒澤 愛理',
         wnameen: 'Kurosawa Eri',
-        intro: '事務'
+        intro: '事務, エンジニア'
     },
 ];
 
@@ -93,8 +93,9 @@ export default function writers() {
                         >
                             {writerData.map(({ wart, wname, intro, wnameen }, index) => (
                                 <Grid item key={index} xs={12} sm={12} md={6}>
-                                    <CardActionArea component="a" href="#" backgroundColor="transparent">
                                         <Card
+                                            component="a"
+                                            href="#"
                                             style={{ color: "aliceblue" }}
                                             sx={{ display: 'flex', flexDirection: 'column' }} >
                                             <CardContent sx={{ flex: '10 auto' }} >
@@ -121,7 +122,7 @@ export default function writers() {
                                                 </Box>
                                             </CardContent>
                                         </Card>
-                                        </CardActionArea>
+                                        
                                 </Grid>
                             ))}
                         </Grid>
@@ -157,12 +158,5 @@ export async function getStaticProps() {
     };
 }
 
-
-
-{/*<Typography variant="body2" color="text.secondary">
-                  well meaning and kindly.
-                  <br />
-                  {'"a benevolent smile"'}
-                  </Typography>*/}
 
 

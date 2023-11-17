@@ -1,6 +1,6 @@
 ---
 title: "腹が減ってるわけじゃない"
-date: "2023-11-05"
+date: "2023.11.05"
 writer: "乾 洋典"
 thumbNa: /images/22398508_s.jpg
 tug: "#食事"
