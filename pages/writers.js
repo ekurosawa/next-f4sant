@@ -86,7 +86,7 @@ export default function writers() {
                             align="center"
                             sx={{ color: "#1a1a1a" }}
                         >
-                            Writers
+                            メンバー
                         </Typography >
                         <Grid
                             container sx={{ mb: 1 }} spacing={4} // containe spacing : アイテム幅の調整
