@@ -5,38 +5,18 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-import { AppBar } from '@mui/material';
-
-
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    background: '#222222'
-  },
-});
 
 function Copyright() {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-
-      <Typography 
-      style={{ color: "aliceblue"}} 
-      variant="body2"
-      >
-        {' © '}
-        {new Date().getFullYear()}
-        {'  '}
-        <Link 
-        sx={{ fontWeight: "bold" }} 
-        color="inherit" href="https://mui.com/" 
-        style={{ textDecoration: 'none' }}
-        >
-          F4SANT
-        </Link>{'  '}
-        All Rights Reserved.
-      </Typography>
-    </ThemeProvider>
+    <Typography variant="body2" color="white">
+      {' © '}
+      {new Date().getFullYear()}
+      {'  '}
+      <Link sx={{ fontWeight: "bold" }} color="inherit" href="https://mui.com/" style={{ textDecoration: 'none' }}>
+        F4ZANT
+      </Link>{'  '}
+      All Rights Reserved.
+    </Typography>
   );
 }
 
@@ -46,29 +26,31 @@ const defaultTheme = createTheme();
 export default function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
+      <CssBaseline />
       <Box
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          minHeight: '50vh',
+          position: "sticky",   
         }}
       >
-        <CssBaseline />
-
+        <Container component="fdoter" sx={{ mt: 0, mb: 0 }} maxWidth="sm">
+        </Container>
         <Box
+
           component="footer"
           sx={{
             py: 3,
             px: 2,
             mt: 'auto',
-            mx: 0,
-            backgroundColor: "#1a1a1a"
+            backgroundColor: "#1a1a1a",
+            position: "sticky",
           }}
         >
           <Container maxWidth="sm">
-            <Typography variant="body1">
+            <Typography sx={{ color: "aliceblue"}} variant="body1">
               Nakazuba
-              </Typography>
+            </Typography>
             <Copyright />
           </Container>
         </Box>

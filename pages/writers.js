@@ -9,7 +9,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
+import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from "@mui/material/CssBaseline";
@@ -33,30 +33,34 @@ const writerData = [
     {
         wart: '/images/itiroshirota.png',
         wname: '白田 一郎',
+        wnameen: 'Shirota Ichiro',
         intro: '管理'
     },
     {
         wart: '/images/nakazuba640.png',
         wname: '柿本 建',
+        wnameen: 'Kakimoto Ken',
         intro: `管理, エンジニア`
     },
     {
         wart: '/images/flowerncafe.png',
         wname: '英 世志香',
+        wnameen: 'Hanabusa Yoshika',
         intro: '事務, デザイナー'
     },
     {
         wart: '/images/hitoriTravel.png',
         wname: '乾 洋典',
+        wnameen: 'Inui Hironori',
         intro: '事務'
     },
     {
         wart: '/images/ekurosawa.png',
         wname: '黒澤 愛理',
+        wnameen: 'Kurosawa Eri',
         intro: '事務'
     },
 ];
-
 
 
 const darkTheme = createTheme();
@@ -64,37 +68,35 @@ const darkTheme = createTheme();
 export default function writers() {
 
     return (
-            <ThemeProvider theme={darkTheme}>
-                <CssBaseline />
+        <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
+
+            <Container fixed style={{ backgroundColor: "aliceblue", minHeight: "100vh" }}>
                 <link rel="icon" href='/images/nakazuba40white.png' />
 
-                <Header >
-                    <meta name="viewport" content="initial-scale=1, width=device-width" />
-                </Header>
+                <Header></Header>
 
                 <Main></Main>
 
-                    <Grid container spacing={5} sx={{ mt: 3 }}>
-                        <Container maxWidth="lg">
-                            <Typography
-                                component="h1"
-                                variant="h4"
-                                align="center"
-                                color="text.primary"
-                                gutterBottom
-                                sx={{ color: "aliceblue" }}
-                            >
-                                Writers
-                            </Typography >
-                            <Grid
-                                container spacing={4} // containe spacing : アイテム幅の調整
-                            >
-
-                                {writerData.map(({ wart, wname, intro }, index) => (
-                                    <Grid item key={index} xs={12} sm={6} md={4}>
+                <Grid container item spacing={5} sx={{ mt: 2, mb: 0, pb: 1 }}>
+                    <Container maxWidth="lg">
+                        <Typography
+                            component="h1"
+                            variant="h4"
+                            align="center"
+                            sx={{ color: "#1a1a1a" }}
+                        >
+                            Writers
+                        </Typography >
+                        <Grid
+                            container sx={{ mb: 1 }} spacing={4} // containe spacing : アイテム幅の調整
+                        >
+                            {writerData.map(({ wart, wname, intro, wnameen }, index) => (
+                                <Grid item key={index} xs={12} sm={12} md={6}>
+                                    <CardActionArea component="a" href="#" backgroundColor="transparent">
                                         <Card
-                                            className='card'
-                                            py={3} sx={{ display: 'flex', flexDirection: 'column' }} >
+                                            style={{ color: "aliceblue" }}
+                                            sx={{ display: 'flex', flexDirection: 'column' }} >
                                             <CardContent sx={{ flex: '10 auto' }} >
                                                 <Box display="flex">
                                                     <CardMedia
@@ -103,14 +105,15 @@ export default function writers() {
                                                         image={wart}
                                                         alt="writer art"
                                                     />
-                                                    <Box px={2} color='inherit'>
-
-                                                        <Typography color="black" fontFamily="sans-serif" fontWeight="Bold" >
+                                                    <Box px={2} sx={{ pt: 1 }} color='inherit'>
+                                                        <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold"  >
                                                             {wname}
+                                                        </Typography >
+                                                        <Typography color="#1a1a1a" fontSize={11} sx={{ pb: 4 }}>
+                                                            {wnameen}
                                                         </Typography>
-
                                                         <Box display="flex" justifyContent="flex-start">
-                                                            <Typography color="black" sx={{ whiteSpace: 'pre-line' }} fontSize={11} >
+                                                            <Typography color="#1a1a1a" fontSize={13} sx={{ whiteSpace: 'pre-line' }}  >
                                                                 {intro}
                                                             </Typography>
                                                         </Box>
@@ -118,17 +121,17 @@ export default function writers() {
                                                 </Box>
                                             </CardContent>
                                         </Card>
-                                    </Grid>
-                                ))}
-                            </Grid>
-                        </Container>
+                                        </CardActionArea>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Container>
+                </Grid>
+            </Container>
 
-                    </Grid>
+            <Footer></Footer>
 
-                <Footer>
-
-                </Footer>
-            </ThemeProvider>
+        </ThemeProvider>
     );
 }
 

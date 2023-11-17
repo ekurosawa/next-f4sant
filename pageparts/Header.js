@@ -35,7 +35,7 @@ function Header(props) {
           <Link 
           fontStyle="bold"
           variant="h5" 
-          style={{ color: "aliceblue" }} 
+          style={{ color: "aliceblue", textDecoration: 'none' }} 
           noWrap sx={{ flexGrow: 1 }} 
           href="/" >
             Nakazuba
