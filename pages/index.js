@@ -102,7 +102,7 @@ export default function Home({ allPostsData }) {
 
                   <Card
                     component="a"
-                    href="#"
+                    href={`/posts/${id}`}
                     style={{ backgroundColor: "#ffeeff" }}
                     sx={{ aspectRatio: 1 / 1, display: 'flex', flexDirection: 'column' }}
                   >
