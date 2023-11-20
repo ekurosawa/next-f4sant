@@ -86,6 +86,7 @@ export default function Post({ postData }) {
           </Typography>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </Box>
+        <Box sx={{height: "15vh"}}></Box>
       </Container>
 
       <Footer></Footer>

@@ -34,7 +34,7 @@ export default function Footer() {
           position: "sticky",   
         }}
       >
-        <Container component="fdoter" sx={{ mt: 0, mb: 0 }} maxWidth="sm">
+        <Container component="footer" sx={{ mt: 0, mb: 0 }} maxWidth="sm">
         </Container>
         <Box
 

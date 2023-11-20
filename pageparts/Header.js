@@ -33,11 +33,13 @@ function Header(props) {
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Link 
+          component="a"
+          href="/"
           fontStyle="bold"
           variant="h5" 
           style={{ color: "aliceblue", textDecoration: 'none' }} 
           noWrap sx={{ flexGrow: 1 }} 
-          href="/" >
+           >
             Nakazuba
           </Link>
           <nav>

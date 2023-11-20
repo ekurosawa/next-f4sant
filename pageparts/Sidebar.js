@@ -41,7 +41,7 @@ function Sidebar(props) {
         ))}
 
         <Typography color="text.primary" variant="h6" gutterBottom sx={{ mt: 3, color: "#1a1a1a" }}>
-          Social
+          {/*Social*/}
         </Typography>
 
 
@@ -52,7 +52,7 @@ function Sidebar(props) {
             href="#"
             key={network.name}
             sx={{ mb: 0.5 }}
-            style={{ color: "#1a1a1a", textDecoration: 'none' }}
+            style={{ color: "#1877f2", textDecoration: 'none' }}
           >
             <Stack direction="row" spacing={1} alignItems="center">
               <network.icon />
