@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import '../styles/style.css';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import * as React from 'react';
@@ -90,7 +91,6 @@ export default function Home({ allPostsData }) {
               variant="h4"
               align="center"
               sx={{ color: "#1a1a1a", mb: 1 }}
-
             >
               記事一覧
             </Typography>
@@ -126,7 +126,8 @@ export default function Home({ allPostsData }) {
                           {writer}
                         </Typography>
                       </Box>
-                        <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary">
+                        <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" href='http://fonts.googleapis.com/css?family=Cantora+One|Ropa+Sans:400,400italic'
+>
                           {title}
                         </Typography>
                     </CardContent>
