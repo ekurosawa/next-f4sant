@@ -82,12 +82,7 @@ export default function Home({ allPostsData }) {
         <Header></Header>
 
         <Main></Main>
-        {/*<MainFeaturedPost post={mainFeaturedPost} />*/}
-        {/*<Grid container spacing={5} sx={{ mt: 3}}>
-          {featuredPosts.map((post) => (
-              <FeaturedPost key={post.title} post={post} />
-            ))}
-          </Grid>*/}
+
         <Grid container spacing={5} sx={{ mt: 2 }}>
           <Container maxWidth="lg">
             <Box >
