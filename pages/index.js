@@ -92,13 +92,13 @@ export default function Home({ allPostsData }) {
               sx={{ color: "#1a1a1a", mb: 1 }}
 
             >
-              Articles
+              記事一覧
             </Typography>
             <Grid
               container spacing={4}
             >
               {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
-                <Grid item key={card} xs={6} sm={6} md={4}>
+                <Grid item key={card} xs={12} sm={6} md={4}>
 
                   <Card
                     component="a"
@@ -109,8 +109,8 @@ export default function Home({ allPostsData }) {
                     <CardMedia
                       component="div"
                       sx={{
-                        // 16:9
-                        pt: '56.25%',
+                        // 16:9 4:3
+                        pt: '75%',
                         backgroundColor: "#FFFFFF"
                       }}
                       image={thumbNa}

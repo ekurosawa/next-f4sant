@@ -49,7 +49,7 @@ function Header(props) {
               sx={{ my: 1, mx: 1.5 }}
               style={{ color: "aliceblue", textDecoration: 'none' }} 
               >
-              WRITERS
+              Member
             </Link>
             <Link
               variant="button"
@@ -57,7 +57,7 @@ function Header(props) {
               sx={{ my: 1, mx: 1.5 }}
               style={{ color: "aliceblue", textDecoration: 'none' }} 
               >
-              SERIALIZATION
+              Serialization
             </Link>
             <Link
               variant="button"
@@ -66,7 +66,7 @@ function Header(props) {
               sx={{ my: 1, mx: 1.5 }}
               style={{ color: "aliceblue", textDecoration: 'none' }} 
             >
-              ABOUT
+              About
             </Link>
           </nav>
           {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
