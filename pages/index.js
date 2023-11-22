@@ -4,7 +4,6 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
-import '../styles/style.css';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import * as React from 'react';
@@ -29,8 +28,13 @@ import Footer from '../pageparts/Footer';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { createAbstractBuilder } from 'typescript';
 
+import { Noto_Sans_JP } from "next/font/google";
+
+const NSJ = Noto_Sans_JP({
+  weight: "400",
+  subsets: ["latin"],
+})
 
 const posts = ['   '];
 
@@ -86,7 +90,9 @@ export default function Home({ allPostsData }) {
           </Grid>*/}
         <Grid container spacing={5} sx={{ mt: 2 }}>
           <Container maxWidth="lg">
+            <Box >
             <Typography
+            className={NSJ.className}
               component="h1"
               variant="h4"
               align="center"
@@ -94,6 +100,7 @@ export default function Home({ allPostsData }) {
             >
               記事一覧
             </Typography>
+            </Box>
             <Grid
               container spacing={4}
             >
@@ -126,8 +133,7 @@ export default function Home({ allPostsData }) {
                           {writer}
                         </Typography>
                       </Box>
-                        <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" href='http://fonts.googleapis.com/css?family=Cantora+One|Ropa+Sans:400,400italic'
->
+                        <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" className={NSJ.className}>
                           {title}
                         </Typography>
                     </CardContent>
