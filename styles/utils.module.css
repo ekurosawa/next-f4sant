@@ -68,3 +68,7 @@
 .card {
   background-color: aliceblue;
 }
+
+.va {
+    writing-mode: vertical-rl;
+}
