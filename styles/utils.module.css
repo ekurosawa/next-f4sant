@@ -70,5 +70,16 @@
 }
 
 .va {
-    writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 20px;
+  font-family: "Noto Serif JP", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "palt";
+  font-feature-settings: "palt";
+  color: #2c3e50;
+  line-height: 2em;
+  text-indent: 1em;
 }

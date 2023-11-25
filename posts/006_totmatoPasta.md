@@ -6,7 +6,7 @@ thumbNa: /images/2363158.png
 tug: "#食事"
 ---
 
-こーじちゅー。。。
+こーじちゅー。。
 
 <!--
 ![Alt text](/images/t_1.png)

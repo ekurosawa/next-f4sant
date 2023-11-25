@@ -3,8 +3,10 @@ title: "彼岸花！"
 date: "2023.10.17"
 writer: "柿本 建"
 thumbNa: /images/hig_2.jpg
-tug: ""
+tug: "#aa"
+direction: va
 ---
+
 
 ![Alt text](/images/hig_1.jpg)
 
@@ -42,3 +44,19 @@ tug: ""
 
 ![Alt text](/images/hig_4.jpg)
 
+
+<style>
+.tate {
+  writing-mode: vertical-rl;
+  margin: 0 auto;
+  padding: 0.7em;
+  border: 1px solid #ddd;
+  box-shadow: 5px 4px 15px -5px #777777;
+  border-radius: 15px;
+}
+.tate span {
+  writing-mode: horizontal-tb;
+}
+.pd2 {font-size:1.2em;}
+
+</style>
