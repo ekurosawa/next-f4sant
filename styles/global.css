@@ -17,6 +17,8 @@ body {
   box-sizing: border-box;
 }
 
+
+
 a {
   color: #0070f3;
   text-decoration: none;
@@ -34,25 +36,64 @@ p {
   text-indent: 0rem;
 }
 
+h1,h2,h3,h5,h6  {
+  border-left:5px solid #24b2dd;
+  padding-left: .2rem;
+  padding-bottom: .05rem;
+  border-bottom: 1px double #ccc;
+}
+
 .appbar {
-  background-color: #1a1a1a;
+    background-color: #1a1a1a;
 }
 
 .footer {
-  background-color: #1a1a1a;
-  height: 120px;
+    background-color: #1a1a1a;
+    height: 120px;
+    
+
+}
   
-}
-
 .card {
-  background-color: aliceblue;
+    background-color: aliceblue;
 }
-
+  
 html {
-  font-family: var(--font-inter);
-}
- 
-h1 {
-  font-family: var(--font-roboto-mono);
+    font-family: var(--font-inter);
 }
 
+
+blockquote {
+  text-indent: 1rem;
+  border-left: 4px solid #8fb8b0;
+  padding: 0 15px;
+  color: #777777; 
+}
+
+i {
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 0.5;
+}
+
+pre {
+  border-bottom:5px solid #24b2dd;
+
+}
+code {
+  border-bottom:5px solid #24b2dd;
+}
+
+datalist {
+  border-bottom:5px solid #24b2dd;
+}
+
+dl {
+  border-bottom:5px solid #24b2dd;
+}
+dt {
+  border-bottom:5px solid #24b2dd;
+}
+dd {
+  border-bottom:5px solid #24b2dd;
+}

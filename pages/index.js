@@ -87,8 +87,7 @@ export default function Home({ allPostsData }) {
           <Container maxWidth="lg">
             <Box >
             <Typography
-            className={NSJ.className}
-              component="h1"
+              className={NSJ.className}
               variant="h4"
               align="center"
               sx={{ color: "#1a1a1a", mb: 1 }}
