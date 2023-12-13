@@ -17,9 +17,7 @@ body {
   box-sizing: border-box;
 }
 
-** {
-  background: linear-gradient(transparent 70%, #FF5 70%);
-}
+
 
 a {
   color: #0070f3;
