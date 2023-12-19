@@ -17,11 +17,11 @@ body {
   box-sizing: border-box;
 }
 
-/*
-*** {
+
+** {
   background: linear-gradient(transparent 70%, #FF5 70%);
 }
-*/
+
 
 a {
   color: #0070f3;
@@ -54,8 +54,6 @@ h1,h2,h3,h5,h6  {
 .footer {
     background-color: #1a1a1a;
     height: 120px;
-    
-
 }
   
 .card {
@@ -78,6 +76,8 @@ i {
   font-family: sans-serif;
   font-style: italic;
   font-size: 0.5;
+  background: linear-gradient(transparent 70%, #FF5 70%);
+
 }
 
 pre {
