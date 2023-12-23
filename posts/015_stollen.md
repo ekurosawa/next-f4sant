@@ -3,7 +3,7 @@ title: "シュトーレンをつくろう"
 date: "2023.12.21"
 writer: "黒澤 愛理"
 thumbNa: /images/sto_10.jpg
-tug: "お菓子作り"
+tug: "#お菓子作り"
 direction: ho
 ---
 
@@ -40,16 +40,12 @@ direction: ho
 
 ![Alt text](/images/sto_3.jpg)
 
-薄力粉と強力粉、溶かしたバターと卵とベーキングパウンダー、砂糖とさっきのナッツとラム漬けのドライフルーツを...
+薄力粉と強力粉、溶かしたバターと卵とベーキングパウンダー、砂糖とさっきのナッツとラム漬けのドライフルーツを
 
 
 ![Alt text](/images/sto_4.jpg)
 
-
-...
-
----
-（以後工事中）
+（続く）
 <!--
 
 ![Alt text](/images/)
