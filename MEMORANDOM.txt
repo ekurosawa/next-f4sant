@@ -1,0 +1,25 @@
+￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥
+mapに関するビルドエラー
+ERROr : Error occurred prerendering page "/hoge".
+Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read property 'map' of undefined
+
+https://nextjs.org/docs/messages/prerender-error
+
+https://zenn.dev/sti320a/articles/16a2851282ce3b
+原因と対処法
+エラーメッセージに含まれるURL（https://nextjs.org/docs/messages/prerender-error） にアクセスすると丁寧に対処法が書かれていた。
+
+Make sure to move any non-pages out of the pages folder
+
+pageではないのもをpagesのフォルダに入れるな、とのことだった。たしかに、エラーが生じていた関数はpageではないのに/pages以下に配置していた。
+
+/pagesと同じ階層に/componentsという名称でディレクトリを作成し、該当の関数を移動してexportした後、pages側からimportすることによって解決した。
+￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥
+
+
+[Rails-API,next-jsを使用]　自分が作成したポートフォリオを紹介させてください。
+https://qiita.com/takaya787/items/bcc374f572b15f112c9a
+
+【個人開発/未経験】エモさたっぷりプロフィール帳アプリ開発してみた【Next.js + Rails API】
+https://qiita.com/mitsu30/items/9d30da75941e328b541f
