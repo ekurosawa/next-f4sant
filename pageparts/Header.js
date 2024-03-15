@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import Search from "../components/search";
 
 import AppBar from '@mui/material/AppBar';
 import GlobalStyles from '@mui/material/GlobalStyles';
@@ -23,59 +24,72 @@ function Header(props) {
 
   return (
     <ThemeProvider theme={theme}>
-    <React.Fragment>
-      <link rel="icon" href='/images/nakazuba40white.png' />
-      <AppBar
-        position="fixed"
-        elevation={1}
-        style={{ backgroundColor: "#1a1a1a", textDecoration: 'none' }}
-        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
-      >
-        <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Link 
-          component="a"
-          href="/"
-          fontStyle="bold"
-          variant="h5" 
-          style={{ color: "aliceblue", textDecoration: 'none' }} 
-          noWrap sx={{ flexGrow: 1 }} 
-           >
-            Nakazuba
-          </Link>
-          <nav>
+      <React.Fragment>
+        <link rel="icon" href='/images/nakazuba40white.png' />
+        <AppBar
+          position="fixed"
+          elevation={1}
+          style={{ backgroundColor: "#1a1a1a", textDecoration: 'none' }}
+          sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        >
+          <Toolbar sx={{ flexWrap: 'wrap' }}>
             <Link
-              variant="button"
-              href="/writers"
-              sx={{ my: 1, mx: 1.5 }}
-              style={{ color: "aliceblue", textDecoration: 'none' }} 
-              >
-              Member
-            </Link>
-            <Link
-              variant="button"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-              style={{ color: "aliceblue", textDecoration: 'none' }} 
-              >
-              Serialization
-            </Link>
-            <Link
-              variant="button"
-              color="text.primary"
-              href="#"
-              sx={{ my: 1, mx: 1.5 }}
-              style={{ color: "aliceblue", textDecoration: 'none' }} 
+              component="a"
+              href="/"
+              fontStyle="bold"
+              variant="h5"
+              style={{ color: "aliceblue", textDecoration: 'none' }}
+              noWrap sx={{ flexGrow: 1 }}
             >
-              About
+              Nakazuba
             </Link>
-          </nav>
-          {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+            <nav>
+              <Link
+                variant="button"
+                href="/writers"
+                sx={{ my: 1, mx: 1.5 }}
+                style={{ color: "aliceblue", textDecoration: 'none' }}
+              >
+                Member
+              </Link>
+              <Link
+                variant="button"
+                href="#"
+                sx={{ my: 1, mx: 1.5 }}
+                style={{ color: "aliceblue", textDecoration: 'none' }}
+              >
+                Serialization
+              </Link>
+              <Link
+                variant="button"
+                color="text.primary"
+                href="#"
+                sx={{ my: 1, mx: 1.5 }}
+                style={{ color: "aliceblue", textDecoration: 'none' }}
+              >
+                About
+              </Link>
+            </nav>
+            {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
           </Button>*/}
-        </Toolbar>
-      </AppBar>
 
-      {/*
+
+
+
+            {/*20240315*/}
+            <div className='search'>
+              <Search />
+            </div>
+
+
+
+
+
+          </Toolbar>
+        </AppBar>
+
+        {/*
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Button size="small">Subscribe</Button>
         <Typography
@@ -114,7 +128,7 @@ function Header(props) {
         ))}
         </Toolbar>
         */}
-    </React.Fragment>
+      </React.Fragment>
     </ThemeProvider>
   );
 }
