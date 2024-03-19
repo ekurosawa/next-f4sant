@@ -22,7 +22,10 @@ import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 
 import Image from 'next/image';
-import { Typography } from '@mui/material';
+import { Link, Typography } from '@mui/material';
+
+//20240319
+import { Tags, Tag } from '../../lib/tag'
 
 
 
@@ -45,11 +48,28 @@ export async function getStaticPaths() {
   };
 }
 
+// 20240319
+const TagIcon = (tag, index) => (
+  <div style={tagIconStyle.box} key={index}>
+    <Link href={`/${tag.path}`}>
+      <a style={tagIconStyle.text}>
+        #{tag}
+      </a>
+    </Link>
+  </div>
+)
+
+
+
+
+
+
 
 const defaultTheme = createTheme();
 
 
 export default function Post({ postData }) {
+
   return (
     <ThemeProvider theme={defaultTheme}>
       <link rel="icon" href="favi.ico" />
@@ -69,14 +89,30 @@ export default function Post({ postData }) {
           </Card>
           <Typography py={1} variant="h4">
             {postData.title}
-            </Typography>
+          </Typography>
           <Box justifyContent="space-between" display="flex" py={1} >
-            <Typography 
-            sx={{ fontSize: 20 }} fontStyle="bold" color="text.secondary" gutterBottom>
-              {postData.tug}
-            </Typography>
-            <Typography 
-            sx={{ fontSize: 16, fontWeight: "bold" }} color="text.secondary" >
+
+
+            {/*
+            <Link
+              href="https://penguinchord.com/blog/web-programming/nextjs-tagged-posts-howto" sx={{ fontSize: 20 }} fontStyle="bold" color="text.secondary" gutterBottom>
+              {postData.tags}
+            </Link>
+            */}
+
+            {/*240319*/}
+            <span>
+              {postData.tags.map((val) =>
+                  <Link href={`/tag/${encodeURIComponent(val)}`} sx={{ fontSize: 20 }} fontStyle="bold" color="text.secondary" gutterBottom>
+                    {val}
+                  </Link>
+                
+              )}
+            </span>
+
+
+            <Typography
+              sx={{ fontSize: 16, fontWeight: "bold" }} color="text.secondary" >
               {postData.date}
             </Typography>
           </Box>
@@ -86,17 +122,20 @@ export default function Post({ postData }) {
           </Typography>
 
           <Box textAlign="left">
-           <div 
-           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-           />
-           </Box>
-           
+            <div
+              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            />
+          </Box>
+
         </Box>
-        <Box sx={{height: "15vh"}}></Box>
+        <Box sx={{ height: "15vh" }}></Box>
       </Container>
+
 
       <Footer></Footer>
     </ThemeProvider>
+
+
   );
 }
 

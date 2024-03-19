@@ -100,7 +100,6 @@ export default function Home({ allPostsData }) {
             >
               {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
                 <Grid item key={card} xs={12} sm={6} md={4}>
-
                   <Card
                     component="a"
                     href={`/posts/${id}`}
@@ -134,6 +133,7 @@ export default function Home({ allPostsData }) {
                   </Card>
                 </Grid>
               ))}
+              
             </Grid>
           </Container>
         </Grid>
