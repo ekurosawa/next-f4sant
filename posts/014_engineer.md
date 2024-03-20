@@ -3,7 +3,7 @@ title: "システムエンジニアって何？職業は？年齢は？身長は
 date: "2023.12.14"
 writer: "乾 洋典"
 thumbNa: /images/sisen_2.png
-tags: ["#SE","#プログラマ","#仕事"]
+tags: ["SE", "プログラマ", "仕事"]
 direction: ho
 ---
 

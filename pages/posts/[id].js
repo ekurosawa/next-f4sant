@@ -29,6 +29,7 @@ import { Tags, Tag } from '../../lib/tag'
 
 
 
+
 export async function getStaticProps({ params }) {
   // markdownToHtmlで
   const content = await markdownToHtml(Post.content || '')
@@ -48,6 +49,7 @@ export async function getStaticPaths() {
   };
 }
 
+{/*
 // 20240319
 const TagIcon = (tag, index) => (
   <div style={tagIconStyle.box} key={index}>
@@ -58,7 +60,7 @@ const TagIcon = (tag, index) => (
     </Link>
   </div>
 )
-
+*/}
 
 
 
@@ -100,7 +102,8 @@ export default function Post({ postData }) {
             </Link>
             */}
 
-            {/*240319*/}
+            {/*
+            240319
             <span>
               {postData.tags.map((val) =>
                   <Link href={`/tag/${encodeURIComponent(val)}`} sx={{ fontSize: 20 }} fontStyle="bold" color="text.secondary" gutterBottom>
@@ -108,7 +111,7 @@ export default function Post({ postData }) {
                   </Link>
                 
               )}
-            </span>
+            </span>*/}
 
 
             <Typography
