@@ -1,16 +1,16 @@
 import Date from '../../components/date';
-import Head from 'next/head';
+import Header from '../../pageparts/Header';
 import Layout, { siteTitle } from '../../components/layout';
 import Link from 'next/link';
-
+import { getAllTags } from '../../lib/posts';
 
 
 export default function Tag({ postData, tag }) {
     return (
       <Layout home>
-        <Head>
+        <Header>
           <title>Tag: {tag}</title>
-        </Head>
+        </Header>
   
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2>Tag: {tag}</h2>
