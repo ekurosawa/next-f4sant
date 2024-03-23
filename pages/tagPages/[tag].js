@@ -7,11 +7,13 @@ import { getAllTags } from '../../lib/posts';
 
 export default function Tag({ postData, tag }) {
     return (
-      <Layout home>
-        <Header>
-          <title>Tag: {tag}</title>
-        </Header>
-  
+      <Container fixed style={{ maxWidth: "800px", backgroundColor: "aliceblue", minHeight: "100vh" }}>
+
+        <Header></Header>
+
+        {/*
+        <title>Tag: {tag}</title>
+
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <h2>Tag: {tag}</h2>
   
@@ -19,18 +21,18 @@ export default function Tag({ postData, tag }) {
             {postData.map(({ id, date, title }) => (
               <li class="post_item" key={id}>
                 <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
+                  {title}
                 </Link>
-                <br />
-                <small class="post_date">
                   <Date dateString={date} />
-                </small>
+                
               </li>
             ))}
           </ul>
         </section>
-      </Layout>
-    )
+            */}
+        </Container>
+
+    );
   }
   
   export async function getStaticPaths() {

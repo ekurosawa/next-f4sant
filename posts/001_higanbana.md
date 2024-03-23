@@ -3,7 +3,7 @@ title: "彼岸花！"
 date: "2023.10.17"
 writer: "柿本 建"
 thumbNa: /images/hig_2.jpg
-tags: ["#散歩", "#花"]
+tag: ["#散歩", "#花"]
 direction: va
 ---
 

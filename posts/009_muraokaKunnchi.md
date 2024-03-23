@@ -3,7 +3,7 @@ title: "村岡くんの家"
 date: "2023.11.05"
 writer: "仲島 才希"
 thumbNa: /images/1087771.png
-tags: ["#文章","#お別れ"]
+tag: ["#文章","#お別れ"]
 ---
 
 

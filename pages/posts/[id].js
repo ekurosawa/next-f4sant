@@ -114,6 +114,16 @@ export default function Post({ postData }) {
             </span>*/}
 
 
+            {/* 0324 */}
+            <p class="post_tag">
+              {postData.tag.map((val) =>
+                  <Link href={`/tag/${encodeURIComponent(val)}`}>
+                    {val} {'      '}
+                  </Link>
+              )}
+            </p>
+
+
             <Typography
               sx={{ fontSize: 16, fontWeight: "bold" }} color="text.secondary" >
               {postData.date}
