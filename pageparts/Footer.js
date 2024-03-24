@@ -31,13 +31,13 @@ export default function Footer() {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          position: "sticky",   
+            
         }}
+        
       >
-        <Container component="footer" sx={{ mt: 0, mb: 0 }} maxWidth="sm">
+        <Container  sx={{ mt: 0, mb: 0 }} maxWidth="sm">
         </Container>
         <Box
-
           component="footer"
           sx={{
             py: 3,

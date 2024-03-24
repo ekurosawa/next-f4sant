@@ -86,15 +86,18 @@ export default function Home({ allPostsData }) {
         <Grid container spacing={5} sx={{ mt: 2 }}>
           <Container maxWidth="lg">
             <Box >
-            <Typography
-              className={NSJ.className}
-              variant="h4"
-              align="center"
-              sx={{ color: "#1a1a1a", mb: 1 }}
-            >
-              記事一覧
-            </Typography>
+              <Typography
+                className={NSJ.className}
+                variant="h4"
+                align="center"
+                sx={{ color: "#1a1a1a", mb: 1 }}
+              >
+                記事一覧
+              </Typography>
             </Box>
+
+            {/*<Divider sx={{pb: 5, pt: 5}}/>*/}
+
             <Grid
               container spacing={4}
             >
@@ -117,7 +120,7 @@ export default function Home({ allPostsData }) {
                       alt="image"
                       href={`/posts/${id}`}
                     />
-                    <CardContent sx={{  flexGrow: 1 }}>
+                    <CardContent sx={{ flexGrow: 1 }}>
                       <Box justifyContent="space-between" display="flex">
                         <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
                           {date}
@@ -126,23 +129,27 @@ export default function Home({ allPostsData }) {
                           {writer}
                         </Typography>
                       </Box>
-                        <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" className={NSJ.className}>
-                          {title}
-                        </Typography>
+                      <Typography sx={{ fontSizeAdjust: 0.56, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" className={NSJ.className}>
+                        {title}
+                      </Typography>
                     </CardContent>
                   </Card>
                 </Grid>
               ))}
-              
+
             </Grid>
           </Container>
         </Grid>
-        <Sidebar
+
+        <Box
+          sx={{ pb: 10 }}
+        ></Box>
+        {/*<Sidebar
           title={sidebar.title}
           description={sidebar.description}
           archives={sidebar.archives}
           social={sidebar.social}
-        />
+                    />*/}
       </Container>
 
       <Footer></Footer>

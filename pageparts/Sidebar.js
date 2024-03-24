@@ -32,8 +32,6 @@ function Sidebar(props) {
         <Typography color="text.primary" variant="h6" gutterBottom sx={{ mt: 3, color: "#1a1a1a" }}>
           Archives
         </Typography>
-
-
         {archives.map(({ archive, title, url },) => (
           <Link display="block" variant="body1" href={archives.url} key={title} style={{ color: "#1a1a1a", textDecoration: 'none' }}>
             {title}

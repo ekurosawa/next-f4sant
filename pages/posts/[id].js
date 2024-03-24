@@ -31,7 +31,6 @@ const defaultTheme = createTheme();
 
 
 export default function Post({ postData }) {
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <link rel="icon" href="favi.ico" />
@@ -49,28 +48,50 @@ export default function Post({ postData }) {
               height={270}
             />
           </Card>
-          <Typography py={1} variant="h4">
-            {postData.title}
-          </Typography>
-          <Box justifyContent="space-between" display="flex" py={1} >
 
-            {/* 0324 */}
-            <p class="post_tag">
-              {postData.tag.map((val) =>
-                  <Link key={Link} href={`/tag/${encodeURIComponent(val)}`}>
-                    {val} {'      '}
-                  </Link>
-              )}
-            </p>
-
-
+          <Box justifyContent="space-between" display="flex">
             <Typography
-              sx={{ fontSize: 16, fontWeight: "bold" }} color="text.secondary" >
+              py={1}
+              sx={{
+                fontSize: 18,
+                fontWeight: "bold",
+                color: "text.secondary"
+              }}>
               {postData.date}
             </Typography>
+
+            <Typography
+              py={1}
+            >
+              {postData.tag.map((val) =>
+                <Link
+                  key={Link}
+                  sx={{
+                    fontSize: 17,
+                    color: "text.secondary",
+                    textDecoration: 'none'
+                  }}
+                  href={`/tag/${encodeURIComponent(val)}`}>
+                  #{val} {'      '}
+                </Link>
+              )}
+            </Typography>
           </Box>
-          <Divider />
-          <Typography py={1} sx={{ fontSize: 16, textAlign: "right" }} color="text.secondary" >
+
+          <Typography 
+            sx={{
+              textAlign: "center",
+              fontWeight: "bold",
+              fontSize: 44,
+              color: "#212121",
+            }}>
+            {postData.title}
+          </Typography>
+
+          <Typography 
+            sx={{ 
+              fontSize: 16, textAlign: "right" 
+              }} color="text.secondary" >
             {postData.writer}
           </Typography>
 
@@ -84,9 +105,8 @@ export default function Post({ postData }) {
         <Box sx={{ height: "15vh" }}></Box>
       </Container>
 
-
       <Footer></Footer>
-    </ThemeProvider>
+    </ThemeProvider >
 
 
   );

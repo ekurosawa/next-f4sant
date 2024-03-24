@@ -93,36 +93,35 @@ export default function writers() {
                         >
                             {writerData.map(({ wart, wname, intro, wnameen }, index) => (
                                 <Grid item key={index} xs={12} sm={12} md={6}>
-                                        <Card
-                                            component="a"
-                                            href="#"
-                                            style={{ color: "aliceblue" }}
-                                            sx={{ display: 'flex', flexDirection: 'column' }} >
-                                            <CardContent sx={{ flex: '10 auto' }} >
-                                                <Box display="flex">
-                                                    <CardMedia
-                                                        component="img"
-                                                        sx={{ width: 151 }}
-                                                        image={wart}
-                                                        alt="writer art"
-                                                    />
-                                                    <Box px={2} sx={{ pt: 1 }} color='inherit'>
-                                                        <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold"  >
-                                                            {wname}
-                                                        </Typography >
-                                                        <Typography color="#1a1a1a" fontSize={11} sx={{ pb: 4 }}>
-                                                            {wnameen}
+                                    <Card
+                                        component="a"
+                                        href="#"
+                                        style={{ color: "aliceblue" }}
+                                        sx={{ display: 'flex', flexDirection: 'column' }} >
+                                        <CardContent sx={{ flex: '10 auto' }} >
+                                            <Box display="flex">
+                                                <CardMedia
+                                                    component="img"
+                                                    sx={{ width: 151 }}
+                                                    image={wart}
+                                                    alt="writer art"
+                                                />
+                                                <Box px={2} sx={{ pt: 1 }} color='inherit'>
+                                                    <Typography color="#1a1a1a" fontSize={17} fontWeight="Bold"  >
+                                                        {wname}
+                                                    </Typography >
+                                                    <Typography color="#1a1a1a" fontSize={11} sx={{ pb: 4 }}>
+                                                        {wnameen}
+                                                    </Typography>
+                                                    <Box display="flex" justifyContent="flex-start">
+                                                        <Typography color="#1a1a1a" fontSize={13} sx={{ whiteSpace: 'pre-line' }}  >
+                                                            {intro}
                                                         </Typography>
-                                                        <Box display="flex" justifyContent="flex-start">
-                                                            <Typography color="#1a1a1a" fontSize={13} sx={{ whiteSpace: 'pre-line' }}  >
-                                                                {intro}
-                                                            </Typography>
-                                                        </Box>
                                                     </Box>
                                                 </Box>
-                                            </CardContent>
-                                        </Card>
-                                        
+                                            </Box>
+                                        </CardContent>
+                                    </Card>
                                 </Grid>
                             ))}
                         </Grid>
@@ -131,7 +130,6 @@ export default function writers() {
             </Container>
 
             <Footer></Footer>
-
         </ThemeProvider>
     );
 }

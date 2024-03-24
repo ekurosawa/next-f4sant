@@ -3,7 +3,7 @@ title: "シュトーレンをつくろう"
 date: "2023.12.21"
 writer: "黒澤 愛理"
 thumbNa: /images/sto_10.jpg
-tag: ["#食事", "#料理", "#お菓子"]
+tag: ["食事", "料理", "お菓子"]
 direction: ho
 ---
 
