@@ -80,18 +80,16 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href='/images/nakazuba40white.png' />
 
         <Header></Header>
-
         <Main></Main>
 
         <Grid container spacing={5} sx={{ mt: 2 }}>
           <Container maxWidth="lg">
-            <Box >
+            <Box>
               <Typography
                 className={NSJ.className}
                 variant="h4"
                 align="center"
-                sx={{ color: "#1a1a1a", mb: 1 }}
-              >
+                sx={{ color: "#1a1a1a", mb: 1 }}>
                 記事一覧
               </Typography>
             </Box>
@@ -99,8 +97,7 @@ export default function Home({ allPostsData }) {
             {/*<Divider sx={{pb: 5, pt: 5}}/>*/}
 
             <Grid
-              container spacing={4}
-            >
+              container spacing={4}>
               {allPostsData.map(({ id, date, title, writer, thumbNa }, card, index) => (
                 <Grid item key={card} xs={12} sm={6} md={4}>
                   <Card
@@ -122,7 +119,7 @@ export default function Home({ allPostsData }) {
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       <Box justifyContent="space-between" display="flex">
-                        <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
+                        <Typography sx={{ fontSize: 11, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary">
                           {date}
                         </Typography>
                         <Typography sx={{ fontSize: 11.5, color: "#1a1a1a", textDecoration: 'none' }} color="text.secondary" >
@@ -136,11 +133,9 @@ export default function Home({ allPostsData }) {
                   </Card>
                 </Grid>
               ))}
-
             </Grid>
           </Container>
         </Grid>
-
         <Box
           sx={{ pb: 10 }}
         ></Box>
@@ -151,9 +146,7 @@ export default function Home({ allPostsData }) {
           social={sidebar.social}
                     />*/}
       </Container>
-
       <Footer></Footer>
-
     </ThemeProvider>
   );
 }

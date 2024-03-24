@@ -47,11 +47,11 @@ export default function Tag({ postData, tag }) {
               sx={{ color: "#1a1a1a" }}
               marginBottom={4}>
               #{tag}
-            </Typography >
+            </Typography>
 
             <Grid
               container sx={{ mb: 1 }} spacing={1} // containe spacing : アイテム幅の調整
-            >
+              >
               {postData.map(({ id, date, title }, card) => (
                 <Grid key={card} xs={12} sm={16} md={4} paddingLeft={2.5} paddingY={1}>
                   <Card
@@ -60,22 +60,21 @@ export default function Tag({ postData, tag }) {
                     style={{ color: "aliceblue" }}
                     sx={{ display: 'flex', flexDirection: 'column' }}
                   >
-                    <CardContent sx={{ flex: '10 auto' }} >                    
-                        <Box px={2} sx={{ pt: 1 }} color='inherit' display="flex" justifyContent="space-between">
-                          <Typography color="aliceblue" fontSize={17} fontWeight="Bold"  >
-                            {title}
-                          </Typography >
-                            <Typography
-                              py={1}
-                              sx={{
-                                fontSize: 18,
-                                fontWeight: "bold",
-                                color: "aliceblue"
-                              }}>
-                              {date}
-                              
-                            </Typography>
-                          </Box>                        
+                    <CardContent sx={{ flex: '10 auto' }} >
+                      <Box px={2} sx={{ pt: 1 }} color='inherit' display="flex" justifyContent="space-between">
+                        <Typography color="aliceblue" fontSize={17} fontWeight="Bold"  >
+                          {title}
+                        </Typography >
+                        <Typography
+                          py={1}
+                          sx={{
+                            fontSize: 18,
+                            fontWeight: "bold",
+                            color: "aliceblue"
+                          }}>
+                          {date}
+                        </Typography>
+                      </Box>
                     </CardContent>
                   </Card>
                 </Grid>

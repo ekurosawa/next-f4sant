@@ -12,7 +12,7 @@ function Copyright() {
       {' © '}
       {new Date().getFullYear()}
       {'  '}
-      <Link sx={{ fontWeight: "bold" }} color="inherit" href="https://mui.com/" style={{ textDecoration: 'none' }}>
+      <Link sx={{ fontWeight: "bold" }} color="inherit" href="#" style={{ textDecoration: 'none' }}>
         F4ZANT
       </Link>{'  '}
       All Rights Reserved.
@@ -30,12 +30,9 @@ export default function Footer() {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: 'column',
-            
-        }}
-        
-      >
-        <Container  sx={{ mt: 0, mb: 0 }} maxWidth="sm">
+          flexDirection: 'column'
+        }}>
+        <Container sx={{ mt: 0, mb: 0 }} maxWidth="sm">
         </Container>
         <Box
           component="footer"
@@ -45,10 +42,9 @@ export default function Footer() {
             mt: 'auto',
             backgroundColor: "#1a1a1a",
             position: "sticky",
-          }}
-        >
+          }}>
           <Container maxWidth="sm">
-            <Typography sx={{ color: "aliceblue"}} variant="body1">
+            <Typography sx={{ color: "aliceblue" }} variant="body1">
               Nakazuba
             </Typography>
             <Copyright />

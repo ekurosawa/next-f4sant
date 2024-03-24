@@ -84,13 +84,12 @@ export default function writers() {
                             component="h1"
                             variant="h4"
                             align="center"
-                            sx={{ color: "#1a1a1a" }}
-                        >
+                            sx={{ color: "#1a1a1a" }}>
                             メンバー
                         </Typography >
                         <Grid
                             container sx={{ mb: 1 }} spacing={4} // containe spacing : アイテム幅の調整
-                        >
+                            >
                             {writerData.map(({ wart, wname, intro, wnameen }, index) => (
                                 <Grid item key={index} xs={12} sm={12} md={6}>
                                     <Card

@@ -42,7 +42,6 @@ function Sidebar(props) {
           {/*Social*/}
         </Typography>
 
-
         {social.map((network, name, key) => (
           <Link
             display="block"

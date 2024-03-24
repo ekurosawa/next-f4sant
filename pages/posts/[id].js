@@ -29,7 +29,6 @@ import { Tags, Tag, tags } from '../../lib/tag'
 
 const defaultTheme = createTheme();
 
-
 export default function Post({ postData }) {
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -45,8 +44,7 @@ export default function Post({ postData }) {
               component="img"
               image={postData.thumbNa}
               alt="thumbna"
-              height={270}
-            />
+              height={270}/>
           </Card>
 
           <Box justifyContent="space-between" display="flex">
@@ -61,8 +59,7 @@ export default function Post({ postData }) {
             </Typography>
 
             <Typography
-              py={1}
-            >
+              py={1}>
               {postData.tag.map((val) =>
                 <Link
                   key={Link}
@@ -94,21 +91,17 @@ export default function Post({ postData }) {
               }} color="text.secondary" >
             {postData.writer}
           </Typography>
-
+          
           <Box textAlign="left">
             <div
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
             />
           </Box>
-
         </Box>
         <Box sx={{ height: "15vh" }}></Box>
       </Container>
-
       <Footer></Footer>
     </ThemeProvider >
-
-
   );
 }
 

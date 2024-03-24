@@ -69,10 +69,10 @@ function Header(props) {
               >
                 About
               </Link>
-                          {/*20240315*/}
-            <div>
-              <Search />
-            </div>
+              {/*20240315*/}
+              <div className='search'>
+                <Search />
+              </div>
             </nav>
             {/*<Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
