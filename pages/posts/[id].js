@@ -57,7 +57,7 @@ export default function Post({ postData }) {
             {/* 0324 */}
             <p class="post_tag">
               {postData.tag.map((val) =>
-                  <Link href={`/tag/${encodeURIComponent(val)}`}>
+                  <Link key={Link} href={`/tag/${encodeURIComponent(val)}`}>
                     {val} {'      '}
                   </Link>
               )}

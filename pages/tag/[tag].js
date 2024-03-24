@@ -4,6 +4,8 @@ import Link from "next/link";
 import Head from "next/head";
 import Date from "../../components/date";
 
+import { Card, Grid } from "@mui/material";
+
 export default function Tag({ postData, tag }) {
   return (
     <Layout home>
@@ -13,16 +15,16 @@ export default function Tag({ postData, tag }) {
 
         <h2>Tag: {tag}</h2>
 
-          {postData.map(({ id, date, title }) => (
-            <li class="post_item" key={id}>
+          {postData.map(({ id, date, title }, card) => (
+            <Grid key={card}>
+            <Card class="post_item" >
               <Link href={`/posts/${id}`}>
                 {title}
               </Link>
               <br />
-              <small class="post_date">
-                <Date dateString={date} />
-              </small>
-            </li>
+                {date}
+            </Card>
+            </Grid>
           ))}
     </Layout>
   )
