@@ -25,47 +25,7 @@ import Image from 'next/image';
 import { Link, Typography } from '@mui/material';
 
 //20240319
-import { Tags, Tag } from '../../lib/tag'
-
-
-
-
-export async function getStaticProps({ params }) {
-  // markdownToHtmlで
-  const content = await markdownToHtml(Post.content || '')
-  const postData = await getPostData(params.id);
-  return {
-    props: {
-      postData,
-    },
-  };
-}
-
-export async function getStaticPaths() {
-  const paths = getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-{/*
-// 20240319
-const TagIcon = (tag, index) => (
-  <div style={tagIconStyle.box} key={index}>
-    <Link href={`/${tag.path}`}>
-      <a style={tagIconStyle.text}>
-        #{tag}
-      </a>
-    </Link>
-  </div>
-)
-*/}
-
-
-
-
-
+import { Tags, Tag, tags } from '../../lib/tag'
 
 const defaultTheme = createTheme();
 
@@ -93,26 +53,6 @@ export default function Post({ postData }) {
             {postData.title}
           </Typography>
           <Box justifyContent="space-between" display="flex" py={1} >
-
-
-            {/*
-            <Link
-              href="https://penguinchord.com/blog/web-programming/nextjs-tagged-posts-howto" sx={{ fontSize: 20 }} fontStyle="bold" color="text.secondary" gutterBottom>
-              {postData.tags}
-            </Link>
-            */}
-
-            {/*
-            240319
-            <span>
-              {postData.tags.map((val) =>
-                  <Link href={`/tag/${encodeURIComponent(val)}`} sx={{ fontSize: 20 }} fontStyle="bold" color="text.secondary" gutterBottom>
-                    {val}
-                  </Link>
-                
-              )}
-            </span>*/}
-
 
             {/* 0324 */}
             <p class="post_tag">
@@ -152,3 +92,21 @@ export default function Post({ postData }) {
   );
 }
 
+export async function getStaticProps({ params }) {
+  // markdownToHtmlで
+  const content = await markdownToHtml(Post.content || '')
+  const postData = await getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
